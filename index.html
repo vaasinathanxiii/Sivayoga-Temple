@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bremma Sri Kundalini Sivayoga Aalayam</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:#0f0f0f;
+  color:#f5f5f5;
+  overflow-x:hidden;
+}
+
+/* Gold Glow Background */
+body::before{
+  content:"";
+  position:fixed;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle, rgba(212,175,55,0.15), transparent 70%);
+  top:-200px;
+  right:-200px;
+  animation:moveGlow 8s infinite alternate ease-in-out;
+  z-index:-1;
+}
+
+@keyframes moveGlow{
+  from{transform:translate(0,0);}
+  to{transform:translate(-100px,100px);}
+}
+
+/* Navbar */
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:rgba(15,15,15,0.9);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  z-index:1000;
+  transition:0.3s;
+}
+
+nav.scrolled{
+  box-shadow:0 5px 25px rgba(0,0,0,0.5);
+}
+
+.logo{
+  font-weight:700;
+  color:#d4af37;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#f5f5f5;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#d4af37;
+}
+
+/* Hamburger */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+  gap:5px;
+}
+
+.hamburger span{
+  width:25px;
+  height:3px;
+  background:#d4af37;
+  transition:0.3s;
+}
+
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg) translate(5px,5px);
+}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* Mobile */
+@media(max-width:768px){
+  nav ul{
+    position:fixed;
+    top:0;
+    right:-100%;
+    flex-direction:column;
+    background:#111;
+    width:220px;
+    height:100vh;
+    padding:80px 20px;
+    gap:25px;
+    transition:0.4s;
+  }
+
+  nav ul.active{ right:0; }
+
+  .hamburger{ display:flex; }
+}
+
+/* Container */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:120px 20px 60px 20px;
+}
+
+/* Hero */
+.hero{
+  text-align:center;
+  margin-bottom:100px;
+}
+
+.hero h1{
+  font-size:60px;
+  background:linear-gradient(to right,#d4af37,#ffffff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:20px;
+  opacity:0.7;
+}
+
+/* Sections */
+.section{
+  margin-bottom:100px;
+}
+
+.section h2{
+  font-size:28px;
+  margin-bottom:40px;
+  border-bottom:1px solid #333;
+  padding-bottom:10px;
+  color:#d4af37;
+}
+
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:15px;
+  border:1px solid #222;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-12px);
+  border:1px solid #d4af37;
+  box-shadow:0 15px 40px rgba(212,175,55,0.2);
+}
+
+.card h3{
+  margin-bottom:15px;
+}
+
+.card p{
+  opacity:0.7;
+  line-height:1.6;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  opacity:0.4;
+  margin-top:60px;
+  font-size:14px;
+}
+
+/* Responsive Hero */
+@media(max-width:768px){
+  .hero h1{font-size:36px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav id="navbar">
+  <div class="logo">🕉 OM NAMASIVAYA</div>
+
+  <ul id="navMenu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<div class="container">
+
+<section class="hero">
+  <h1>Bremma Sri Kundalini Sivayoga Aalayam</h1>
+  <p>Ipoh, Perak • Spiritual Awakening • Divine Energy</p>
+</section>
+
+<section id="about" class="section">
+  <h2>About the Temple</h2>
+  <p style="opacity:0.7; line-height:1.8;">
+    Bremma Sri Kundalini Sivayoga Aalayam is a sacred spiritual center dedicated to
+    Kundalini awakening, Siddhar traditions, meditation, and divine worship.
+    A peaceful sanctuary for inner transformation and spiritual growth.
+  </p>
+</section>
+
+<section id="services" class="section">
+  <h2>Spiritual Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🕉 Daily Pooja</h3>
+      <p>Traditional rituals performed with devotion and discipline.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧘 Kundalini Meditation</h3>
+      <p>Guided sessions for spiritual awakening and inner balance.</p>
+    </div>
+
+    <div class="card">
+      <h3>📿 Siddhar Samadhi Worship</h3>
+      <p>Honoring sacred Siddhar lineage and spiritual masters.</p>
+    </div>
+  </div>
+</section>
+
+<section id="events" class="section">
+  <h2>Upcoming Events</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🌕 Full Moon Meditation</h3>
+      <p>Special Pournami meditation gathering every month.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Special Abishekam</h3>
+      <p>Conducted on auspicious spiritual days.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Information</h2>
+  <p style="opacity:0.7; line-height:1.8;">
+    📍 Petronas, 31350 Ipoh, Perak, Malaysia<br>
+    📞 +60 16-543 4809<br>
+    🕘 9:30 AM – 11:30 AM | 5:30 PM – 7:00 PM
+  </p>
+</section>
+
+<footer>
+  © 2026 Bremma Sri Kundalini Sivayoga Aalayam
+</footer>
+
+</div>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+const navbar = document.getElementById("navbar");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 20){
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+</script>
+
+</body>
+</html>
